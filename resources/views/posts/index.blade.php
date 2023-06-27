@@ -69,11 +69,11 @@
         //message with toastr
         @if(session()->has('success'))
         
-            toastr.success('{{ session('success') }}', 'Success!'); 
+            toastr.success('{{ session('success') }}', 'Berhasil!'); 
 
         @elseif(session()->has('error'))
 
-            toastr.error('{{ session('error') }}', 'Fail!'); 
+            toastr.error('{{ session('error') }}', 'Gagal!'); 
             
         @endif
     </script>
