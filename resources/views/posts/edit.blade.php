@@ -57,7 +57,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Harga</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $post->title) }}" placeholder="Masukkan Nama Barang">
+                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $post->title) }}" placeholder="Masukkan Harga Barang">
                             
                                 <!-- error message untuk title -->
                                 @error('title')
@@ -69,7 +69,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Nama Barang</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
+                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Nama Barang">{{ old('content') }}</textarea>
                             
                                 <!-- error message untuk content -->
                                 @error('content')
