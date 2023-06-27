@@ -19,14 +19,14 @@
                 </div>
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <a href="{{ route('posts.create') }}" class="btn btn-md btn-success mb-3">TAMBAH POST</a>
+                        <a href="{{ route('posts.create') }}" class="btn btn-md btn-success mb-3">Tambah Data Barang</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th scope="col">GAMBAR</th>
-                                <th scope="col">JUDUL</th>
-                                <th scope="col">CONTENT</th>
-                                <th scope="col">AKSI</th>
+                                <th scope="col">Gambar</th>
+                                <th scope="col">Nama Barang</th>
+                                <th scope="col">Harga</th>
+                                <th scope="col">Stok</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -38,18 +38,18 @@
                                     <td>{{ $post->title }}</td>
                                     <td>{!! $post->content !!}</td>
                                     <td class="text-center">
-                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
-                                            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-dark">SHOW</a>
-                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                                        <form onsubmit="return confirm('Apa Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                                            <a href="{{ route('posts.show', $post->id) }}" class="btn btn-sm btn-dark">Show</a>
+                                            <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-sm btn-primary">Edit</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
                               @empty
                                   <div class="alert alert-danger">
-                                      Data Post belum Tersedia.
+                                      Data Barang belum Tersedia.
                                   </div>
                               @endforelse
                             </tbody>
@@ -69,11 +69,11 @@
         //message with toastr
         @if(session()->has('success'))
         
-            toastr.success('{{ session('success') }}', 'BERHASIL!'); 
+            toastr.success('{{ session('success') }}', 'Success!'); 
 
         @elseif(session()->has('error'))
 
-            toastr.error('{{ session('error') }}', 'GAGAL!'); 
+            toastr.error('{{ session('error') }}', 'Fail!'); 
             
         @endif
     </script>
