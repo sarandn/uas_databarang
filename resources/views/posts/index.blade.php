@@ -121,7 +121,7 @@
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
                         <a href="{{ route('posts.create') }}" class="btn btn-md btn-success mb-3">Tambah Data Barang</a>
-                        <table class="table table-bordered">
+                        <table class="table table-bordered table-striped table-hover">
                             <thead>
                               <tr>
                                 <th scope="col">Gambar</th>
@@ -178,6 +178,11 @@
             
         @endif
     </script>
+
+    <hr>
+    <div class = "align center">
+        <p> Copyright Sari Andini Putri </p>
+</div>
 
 </body>
 </html>

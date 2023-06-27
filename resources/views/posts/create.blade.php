@@ -7,8 +7,40 @@
     <title>Tambah Data Barang Savvier Bag</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body style="background: lightgray">
+<body style="background: pink">
+        <!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style ="background colour : pink">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
 
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <img
+          src="https://i.postimg.cc/LXwLLkB7/Saracina-Logo-Real-Company-Alphabet-Letter-S-Logo-removebg-preview.png"
+          height="70"
+          alt="Savier Logo"
+          loading="lazy"
+        />
+      </a>
+      <h3 class="text-center my-4 text-light" > Tambah Data Barang Savvier</h3>
+      
+    </div>
+</nav>
+<!-- Navbar -->
     <div class="container mt-5 mb-5">
         <div class="row">
             <div class="col-md-12">
