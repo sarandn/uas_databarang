@@ -18,7 +18,7 @@ class PostController extends Controller
     /**
      * index
      *
-     * @return View
+     * @return void
      */
     public function index(): View
     {
@@ -32,7 +32,7 @@ class PostController extends Controller
     /**
      * create
      *
-     * @return View
+     * @return void
      */
     public function create(): View
     {
@@ -67,5 +67,20 @@ class PostController extends Controller
 
         //redirect to index
         return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Disimpan!']);
+    }
+    
+    /**
+     * show
+     *
+     * @param  mixed $id
+     * @return View
+     */
+    public function show(string $id): View
+    {
+        //get post by ID
+        $post = Post::findOrFail($id);
+
+        //render view with post
+        return view('posts.show', compact('post'));
     }
 }
