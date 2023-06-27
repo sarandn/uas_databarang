@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Barang</title>
+    <title>Data Barang Savvier Bag</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 <body style="background : pink">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg" style ="background colour : pink">
   <!-- Container wrapper -->
   <div class="container-fluid">
     <!-- Toggle button -->
@@ -32,25 +32,14 @@
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-lg-0" href="#">
         <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="15"
-          alt="MDB Logo"
+          src="https://i.postimg.cc/LXwLLkB7/Saracina-Logo-Real-Company-Alphabet-Letter-S-Logo-removebg-preview.png"
+          height="70"
+          alt="Savier Logo"
           loading="lazy"
         />
       </a>
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-        </li>
-      </ul>
-      <!-- Left links -->
+      <h3 class="text-center my-4 text-light" >Data Barang Savvier</h3>
+      
     </div>
     <!-- Collapsible wrapper -->
 
@@ -100,9 +89,9 @@
           aria-expanded="false"
         >
           <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            src="https://i.postimg.cc/JzJN78pV/Saracina-Logo-Real-Company-Alphabet-Letter-S-Logo.png"
             class="rounded-circle"
-            height="25"
+            height="30"
             alt="Black and White Portrait of a Man"
             loading="lazy"
           />
@@ -128,10 +117,7 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-                <div>
-                    <h3 class="text-center my-4 text-light" >Data Barang</h3>        
-                    <hr>
-                </div>
+                
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
                         <a href="{{ route('posts.create') }}" class="btn btn-md btn-success mb-3">Tambah Data Barang</a>
