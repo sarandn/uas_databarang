@@ -24,7 +24,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">Nama Barang</label>
+                                <label class="font-weight-bold">Harga</label>
                                 <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $post->title) }}" placeholder="Masukkan Nama Barang">
                             
                                 <!-- error message untuk title -->
@@ -36,8 +36,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">Harga</label>
-                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Harga Barang">{{ old('content', $post->content) }}</textarea>
+                                <label class="font-weight-bold">Nama Barang</label>
+                                <textarea class="form-control @error('content') is-invalid @enderror" name="content" rows="5" placeholder="Masukkan Konten Post">{{ old('content') }}</textarea>
                             
                                 <!-- error message untuk content -->
                                 @error('content')
@@ -46,17 +46,8 @@
                                     </div>
                                 @enderror
                             </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold">Stok</label>
-                                <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title', $post->title) }}" placeholder="Masukkan Stok Barang">
+
                             
-                                <!-- error message untuk title -->
-                                @error('title')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
 
                             <button type="submit" class="btn btn-md btn-primary">UPDATE</button>
                             <button type="reset" class="btn btn-md btn-warning">RESET</button>
