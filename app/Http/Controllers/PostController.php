@@ -17,7 +17,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
-{
+{    
     /**
      * index
      *
@@ -33,7 +33,7 @@ class PostController extends Controller
     }
 
     /**
-     * index
+     * create
      *
      * @return View
      */
@@ -41,7 +41,7 @@ class PostController extends Controller
     {
         return view('posts.create');
     }
-
+ 
     /**
      * store
      *
@@ -86,7 +86,7 @@ class PostController extends Controller
         //render view with post
         return view('posts.show', compact('post'));
     }
-  
+
     /**
      * edit
      *
@@ -101,7 +101,7 @@ class PostController extends Controller
         //render view with post
         return view('posts.edit', compact('post'));
     }
-    
+        
     /**
      * update
      *
@@ -149,5 +149,26 @@ class PostController extends Controller
 
         //redirect to index
         return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Diubah!']);
+    }
+
+    /**
+     * destroy
+     *
+     * @param  mixed $post
+     * @return void
+     */
+    public function destroy($id): RedirectResponse
+    {
+        //get post by ID
+        $post = Post::findOrFail($id);
+
+        //delete image
+        Storage::delete('public/posts/'. $post->image);
+
+        //delete post
+        $post->delete();
+
+        //redirect to index
+        return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Dihapus!']);
     }
 }
